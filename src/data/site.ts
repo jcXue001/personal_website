@@ -12,6 +12,10 @@ export const site = {
     mec: "https://mec.xjtu.edu.cn/",
     advisor: "https://gr.xjtu.edu.cn/en/web/lingling.wu/home",
   },
+  cv: {
+    enPdf: "/files/CV_EN.pdf",
+    zhPdf: "/files/CV_ZH.pdf",
+  },
   bio:
     "My work focuses on mechanical metamaterials, robot development based on STM32 microcontrollers, and online monitoring for 3D printing.",
   researchInterests: [
