@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site";
+---
+<BaseLayout title={`${site.name} · Contact`} description="Contact information">
+  <section class="hero" style="padding-bottom: 8px;">
+    <h1>Contact</h1>
+    <p>Feel free to reach out (about anything you are interested in).</p>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      <div class="card" style="grid-column: span 12;">
+        <h2>Email</h2>
+        <p><a href={`mailto:${site.emailPrimary}`}>{site.emailPrimary}</a></p>
+        <p class="kicker">Alternative: <a href={`mailto:${site.emailAlt}`}>{site.emailAlt}</a></p>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <h2>GitHub</h2>
+        <p><a href={site.links.github}>{site.links.github}</a></p>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <h2>Google Scholar</h2>
+        <p><a href={site.links.scholar}>{site.links.scholar}</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

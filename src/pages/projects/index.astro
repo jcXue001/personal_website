@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site";
+---
+<BaseLayout title={`${site.name} · Projects`} description="Research projects and highlights">
+  <section class="hero" style="padding-bottom: 8px;">
+    <h1>Projects</h1>
+    <p>A minimal overview of selected projects and research directions.</p>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      {site.projects.map((p) => (
+        <div class="card" style="grid-column: span 6;">
+          <img class="thumb" src={p.image} alt={p.title} loading="lazy" />
+          <div style="height:10px"></div>
+          <h2>{p.title}</h2>
+          <p>{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <h2>Media</h2>
+      <p class="kicker">Animations from the previous site are kept here for reference.</p>
+      <div class="grid" style="margin-top: 12px;">
+        {[
+          "3D_printing_reobot.gif",
+          "Online_monitor.gif",
+          "R1.gif",
+          "R2.gif",
+          "R3.gif",
+          "R4.gif",
+          "P1.gif",
+          "P2.gif",
+          "P3.gif",
+        ].map((name) => (
+          <div class="card" style="grid-column: span 4; padding: 10px;">
+            <img class="thumb" src={`/images/projects/${name}`} alt={name} loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+<BaseLayout title={`${site.name} · Home`} description={site.bio}>
+  <section class="hero">
+    <h1>
+      {site.name} <span style="color:var(--muted); font-weight:600;">({site.nameZh})</span>
+    </h1>
+    <p>
+      Master student at <a href={site.links.xjtu}>Xi'an Jiaotong University</a> · School of Mechanical Engineering.
+      Advised by <a href={site.links.advisor}>Prof. Lingling Wu</a>.
+    </p>
+    <p>{site.bio}</p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a class="pill" href={site.links.scholar}>Google Scholar</a>
+      <a class="pill" href={site.links.github}>GitHub</a>
+      <a class="pill" href="/cv/">CV</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Research Interests</h2>
+    </div>
+    <div class="grid">
+      {site.researchInterests.map((item) => (
+        <div class="card" style="grid-column: span 4;">
+          <h3>{item.title}</h3>
+          <p>{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Selected Projects</h2>
+      <a href="/projects/">View all →</a>
+    </div>
+    <div class="grid">
+      {site.projects.map((p) => (
+        <div class="card" style="grid-column: span 4;">
+          <img class="thumb" src={p.image} alt={p.title} loading="lazy" />
+          <div style="height:10px"></div>
+          <h3>{p.title}</h3>
+          <p>{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div class="card">
+        <div class="section-title">
+          <h2>Internships</h2>
+        </div>
+        {site.internships.map((it) => (
+          <div style="margin-bottom: 14px;">
+            <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+              <strong><a href={it.orgUrl}>{it.org}</a></strong>
+              <span class="kicker">{it.when}</span>
+            </div>
+            <ul>
+              {it.bullets.map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div class="card">
+        <div class="section-title">
+          <h2>News</h2>
+        </div>
+        <ul>
+          {site.news.map((n) => (
+            <li>
+              <span class="kicker">{n.when}</span>
+              <div>
+                {n.href ? <a href={n.href}>{n.text}</a> : <span>{n.text}</span>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

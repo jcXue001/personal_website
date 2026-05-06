@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site";
+---
+<BaseLayout title={`${site.name} · Publications`} description="Scholarship & publications">
+  <section class="hero" style="padding-bottom: 8px;">
+    <h1>Publications</h1>
+    <p>
+      Google Scholar: <a href={site.links.scholar}>{site.links.scholar}</a>
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="grid">
+      {site.publications.map((p) => (
+        <article class="card" style="grid-column: span 12;">
+          <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+            <h2 style="margin:0; font-size: 18px;">
+              <a href={p.href}>{p.title}</a>
+            </h2>
+            <span class="kicker">{p.when}</span>
+          </div>
+          <div class="kicker">{p.venue}</div>
+          <div style="margin-top: 10px; color: var(--muted);">
+            <strong style="color: var(--fg); font-weight: 600;">My contribution:</strong> {p.role}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+

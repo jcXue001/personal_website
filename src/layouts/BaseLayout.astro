@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import ThemeToggle from "../components/ThemeToggle.astro";
+import { site } from "../data/site";
+
+const { title = site.name, description = site.bio } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/">
+          <strong>{site.name}</strong>
+          <span>{site.title}</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="pill" href="/publications/">Publications</a>
+          <a class="pill" href="/projects/">Projects</a>
+          <a class="pill" href="/cv/">CV</a>
+          <a class="pill" href="/contact/">Contact</a>
+          <ThemeToggle />
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+          <span>© {new Date().getFullYear()} {site.name}</span>
+          <span>
+            <a href={site.links.github}>GitHub</a>
+            {" · "}
+            <a href={site.links.scholar}>Google Scholar</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
