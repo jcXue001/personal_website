@@ -26,6 +26,25 @@ jobs:
         with:
           node-version: 20
 
+      - name: Build CV (EN) PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: cv_src/overleaf_en
+          root_file: main.tex
+
+      - name: Build CV (ZH) PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: cv_src/overleaf_zh/resume
+          root_file: resume-zh_CN.tex
+          latexmk_use_xelatex: true
+
+      - name: Place CV PDFs
+        run: |
+          mkdir -p public/files
+          cp cv_src/overleaf_en/main.pdf public/files/CV_EN.pdf
+          cp cv_src/overleaf_zh/resume/resume-zh_CN.pdf public/files/CV_ZH.pdf
+
       - name: Install
         run: npm install --no-audit --no-fund
 

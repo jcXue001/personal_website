@@ -1,0 +1,173 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ulem}
+\setlist[itemize]{leftmargin=*, nosep}
+
+% 修复fontawesome5冲突
+\makeatletter
+\@namedef{ver@fontawesome5.sty}{9999/99/99} % 欺骗系统认为已加载
+\makeatother
+\usepackage{fontawesome5}
+
+% 自定义图标命令
+\newcommand{\fapatent}{\faCopyright}
+\newcommand{\faconference}{\faComments}
+\newcommand{\faachievement}{\faTrophy}
+\newcommand{\faresearch}{\faFlask}
+\newcommand{\faWebsite}{\faGlobe}
+\newcommand{\homepages}[2]{\faWebsite\ \href{#2}{#1}}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{薛嘉诚}
+
+\basicInfo{
+  \email{xuejiacheng2022@163.com} \textperiodcentered\ 
+  \phone{+86 187-2968-9067} \textperiodcentered\ 
+  \homepages{个人主页}{https://jcxue001.github.io/personal_website/}
+}
+
+% ==================== 教育背景 ====================
+\section{\faGraduationCap\  教育背景}
+% 本科
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \textbf{西安交通大学（985、211院校）} & \textit{机械工程学士} & 2019年9月 -- 2023年6月 \\
+\end{tabular*}
+% 硕士
+\noindent
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r@{}}
+  \textbf{西安交通大学（985、211院校）} & \textit{机械工程硕士研究生} & 2023年9月 -- 至今 \\
+\end{tabular*}
+\begin{itemize}
+  \item \textbf{研究方向}: 3D打印技术、机器学习在制造中的应用、机器人控制系统
+\end{itemize}
+
+% ==================== 论文发表 ====================
+\section{\faresearch\  论文发表}
+\begin{itemize}
+  \item \textbf{\textbf{Xue, J.}}, Bao, H., Liu, T., et al. (2025). \textit{ 平衡可制造性与紧凑性的力学超材料逆向设计：晶格胞元案例研究}. Extreme Mechanics Letters, \textit{79}, 102395. 
+  \href{https://doi.org/10.1016/j.eml.2025.10239}{\textbf{doi.org/10.1016/j.eml.2025.10239}}
+  
+  \item Chi, X.\textsuperscript{\dag}, \textbf{\textbf{Xue, J.}}\textsuperscript{\dag}, Jia, L., et al. (2025). \textit{基于机器学习的连续纤维增强复合材料3D打印的在线监测与闭环控制}. Additive Manufacturing Frontiers, \textit{4}, 200196. 
+  \href{https://doi.org/10.1016/j.amf.2025.200196}{\textbf{doi.org/10.1016/j.amf.2025.200196}} \textsuperscript{\dag}\textit{共同一作}
+  
+  \item Wu, L., \textbf{\textbf{Xue, J.}}, Tian, X., et al. (2023). \textit{多功能3D打印超材料}. Additive Manufacturing Frontiers, \textit{2}, 100091. 
+  \href{https://doi.org/10.1016/j.cjmeam.2023.100091}{\textbf{doi.org/10.1016/j.cjmeam.2023.100091}}
+  
+  \item Wu, L., Lu, Y., Li, P., Wang, Y., \textbf{\textbf{Xue, J.}}, et al. (2024). \textit{用于手写数字识别的力学超材料}. Advanced Science, \textit{11}, 2308137. 
+  \href{https://doi.org/10.1002/advs.202308137}{\textbf{doi.org/10.1002/advs.202308137}}
+  
+  \item Song, X., Yan, S., Wang, Y., Zhang, H., \textbf{\textbf{Xue, J.}}, et al. (2025). \textit{基于遗传算法的多载荷振动隔离力学超材料}. Journal of Materiomics, \textit{11}, 100944. 
+  \href{https://doi.org/10.1016/j.jmat.2024.100944}{\textbf{doi.org/10.1016/j.jmat.2024.100944}}
+
+\end{itemize}
+
+% ==================== 科研项目经历 ====================
+\section{\research\  科研项目经历}
+\datedsubsection{\textbf{ROBOMASTER舵轮步兵机器人研发}}{2020年9月 -- 2023年8月}
+\textit{机械组，队长}
+\begin{itemize}
+  \item 针对RoboMaster大赛对整机功率的限制，设计方案以提升机器人在限定功率条件下的移动速度与爬坡性能\textit{\textbf{(需求分析)}}
+  \item 推导机器人底盘的运动学与动力学模型，结合汽车动力学理论，在Webots仿真平台中测试飞坡过程中的理想重心位置，用于指导机械结构布局优化；二次开发RM3508电机，自主更换减速箱实现速度提升147\%；同时优化轮胎形状与材料，提升爬坡时的地面附着力\textit{\textbf{(问题建模)}}
+  \item 熟练使用SolidWorks进行结构建模，Abaqus进行关键部件应力仿真分析\textit{\textbf{(结构设计与力学分析)}}
+  \item 独立完成三轴铣床加工、激光切割与3D打印零件制造，实现从建模到加工的全流程控制；同时负责元器件选型、机械结构组装与集成\textit{\textbf{(机械加工与装配)}}
+\end{itemize}
+
+\datedsubsection{\textbf{可移动3D打印机器人研发（专利授权）}}{2024年5月 -- 至今}
+\textit{独立完成} \href{https://gitee.com/jcXue/mam_-robot.git}{[gitee链接]}
+\begin{itemize}
+  \item 针对传统大型3D打印设备"以大博大"制造方式成本高、灵活性差的问题，提出小型移动式机器人平台方案，实现大尺寸构件的经济化增材制造\textit{\textbf{(需求分析)}}
+  \item 参考成熟机器人底盘与3D打印结构，采用龙门式架构+Pitch旋转轴方案，独立完成平台结构设计、材料选型、机械组装及电子线路布线，实现五自由度路径控制，每200mm行程误差控制在1.41mm内\textit{\textbf{(结构设计与装配)}}
+  \item 基于STM32平台编写多模块控制代码，集成PID控制与CAN/I2C/UART/PWM等通信，完成移动底盘运动控制、打印机串口通信、机械臂联动控制等功能，实现全流程闭环协调\textit{\textbf{(嵌入式系统开发)}}
+\end{itemize}
+
+\datedsubsection{\textbf{基于电磁悬浮头部的球形机器人设计}}{2021年4月 -- 2022年8月}
+\textit{机械组，负责人}
+\begin{itemize}
+  \item 研究并复现现有球形机器人结构，提出基于底盘动平衡与云台分离的稳定控制方案\textit{\textbf{(需求分析)}}
+  \item 完成整机结构建模，设计惯性飞轮配重以实现原地自转功能，优化重心偏移结构以简化控制模型；分别采用同步带、锥齿轮与直齿轮实现三个旋转自由度的驱动方案\textit{\textbf{(整机结构设计)}}
+  \item 外协精密加工关键部件，自主完成零件选型、装配与机械调试，协同电控队友完成电路对接与整机联调\textit{\textbf{(零部件选型与装备调试)}}
+  \item 主导第二代样机的迭代设计与搭建，使用蜗轮蜗杆结构替代俯仰角的同步带，增加减速比并实现自锁，提升云台稳定性并方便电控调试\textit{\textbf{(产品迭代)}}
+\end{itemize}
+
+\datedsubsection{\textbf{基于CNN的3D打印机实时视觉监测系统（论文发表）}}{2023年10月 -- 2024年6月}
+\textit{独立完成} \href{https://gitee.com/jcXue/graduation-design.git}{[gitee链接]}
+\begin{itemize}
+  \item 构建FDM 3D打印机在线监测系统，基于Mask R-CNN完成图像分割，结合ResNet-50构建缺陷识别网络，实现断丝、欠挤等故障的精准检测，识别准确率达97.7\%\textit{\textbf{(深度学习算法部署)}}
+  \item 集成OctoPrint平台，搭建端到端闭环反馈通道，实现图像识别与打印控制联动，具备部署至桌面级平台的实际可行性\textit{\textbf{(软硬件系统集成与闭环控制)}}
+\end{itemize}
+
+\datedsubsection{\textbf{基于RCGAN网络的超材料逆向设计（论文在投）}}{2023年10月 -- 至今}
+\textit{独立完成} \href{https://github.com/jcXue001/Multi-functional-materials-design.git}{[github项目1]} \href{https://github.com/jcXue001/RCGAN-MO.git}{[github项目2]}
+\begin{itemize}
+  \item 开展系统性的国际文献调研，复现并评估Nature Communications、Science等刊物中的CVAE、CGAN、遗传算法等典型逆向模型，比较其在准确性与可制造性上的表现差异\textit{\textbf{(算法调研与复现)}}
+  \item 使用Python完成Abaqus二次开发，批量生成526组仿真数据\textit{\textbf{(Abaqus二次开发-数据生成)}}
+  \item 基于PyTorch搭建生成式神经网络RCGAN，输入期望刚度到模型中，可以输出模型几何参数，实现特殊性能结构的可控逆向设计；回归精度R²=97.2\%，随后使用梯度下降完成多目标寻优，同时兼顾结构紧凑性与可制造性\textit{\textbf{(机器学习算法)}}
+\end{itemize}
+
+% ==================== 专利成果 ====================
+\section{\fapatent\  专利成果}
+\begin{itemize}
+  \item Li D, \textbf{Xue J.} (2024). \textit{用于自动化制造的创新3D打印机器人}. 中国专利号：7846171，国家知识产权局。
+\end{itemize}
+
+% ==================== 荣誉奖项 ====================
+\section{\faachievement\  荣誉奖项}
+\begin{itemize}
+  \item \textbf{第十一届"挑战杯"全国大学生创业计划竞赛银奖} \hfill \textit{2022年6月} \\
+  第五完成人，依托西安交通大学机器人所负责球形机器人结构设计
+  
+  \item \textbf{全国大学生机器人大赛机甲大师全国赛十六强（国家一等奖）} \hfill \textit{2023年8月} \\
+  担任机器人队队长（团队规模36人），研发平衡步兵机器人与舵轮步兵底盘，开发轨迹测试软件
+  
+  \item \textbf{全国大学生机器人大赛机甲大师全国赛十六强（国家一等奖）} \hfill \textit{2024年8月} \\
+  机器人队顾问
+  
+  \item \textbf{第十届西安交通大学创业实践大赛银奖} \hfill \textit{2022年5月} \\
+  项目负责人
+  
+  \item \textbf{全国大学生机器人大赛机甲大师西北赛区高校对抗赛二等奖} \hfill \textit{2021年4月} \\
+  机械核心成员
+  
+\end{itemize}
+
+% ==================== 学术会议 ====================
+\section{\faconference\  学术会议}
+\begin{itemize}
+  \item \textbf{学术汇报}: 在第3届中国超材料大会汇报基于机器学习的力学超材料逆向设计（中国嘉兴，2024年5月）
+  \item \textbf{学术汇报}: 在第13届亚洲-大洋洲复合材料大会汇报复合材料创新工作（日本京都，2024年8月）
+\end{itemize}
+
+% ==================== 实习经历 ====================
+\section{\faBriefcase\  实习经历}
+\datedsubsection{\textbf{DJI大疆 | 结构工程师实习生}}{2025年10月 -- 2026年1月}
+\textit{实习}
+
+\datedsubsection{\textbf{DJI大疆 | RoboMaster部}, 长沙}{2024年5月}
+\textit{实习}
+
+\datedsubsection{\textbf{杭州西湖斐波那契公司 | 电机控制部}, 杭州}{2024年7月}
+\textit{具身智能机械臂电机闭环控制} \href{https://gitee.com/jcXue/foc_-motor}{[gitee链接]}
+
+% ==================== 专业技能 ====================
+\section{\faCogs\  专业技能}
+\begin{itemize}
+  \item \textbf{语言能力}: 英语（TOEFL iBT: 98，阅读29，听力22，口语22，写作25），中文（母语）
+  \item \textbf{工程软件}: SolidWorks建模、Abaqus有限元分析、ANSYS仿真
+  \item \textbf{编程语言}: Python（PyTorch）、C语言、MATLAB数值计算
+  \item \textbf{硬件开发}: STM32单片机嵌入式系统设计、机电系统集成
+  \item \textbf{研究方法}: 机器学习应用、有限元分析、3D打印工艺优化、机器人运动控制
+\end{itemize}
+
+\end{document}
