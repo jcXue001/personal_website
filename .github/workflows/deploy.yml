@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   pages: write
@@ -31,6 +34,7 @@ jobs:
         with:
           working_directory: cv_src/overleaf_en
           root_file: main.tex
+          args: -interaction=nonstopmode -file-line-error
 
       - name: Build CV (ZH) PDF
         uses: xu-cheng/latex-action@v3
@@ -38,6 +42,19 @@ jobs:
           working_directory: cv_src/overleaf_zh/resume
           root_file: resume-zh_CN.tex
           latexmk_use_xelatex: true
+          args: -interaction=nonstopmode -file-line-error
+
+      - name: Debug LaTeX logs (always)
+        if: always()
+        run: |
+          echo "=== EN files ==="
+          ls -la cv_src/overleaf_en || true
+          echo "=== EN log tail ==="
+          test -f cv_src/overleaf_en/main.log && tail -n 200 cv_src/overleaf_en/main.log || true
+          echo "=== ZH files ==="
+          ls -la cv_src/overleaf_zh/resume || true
+          echo "=== ZH log tail ==="
+          test -f cv_src/overleaf_zh/resume/resume-zh_CN.log && tail -n 200 cv_src/overleaf_zh/resume/resume-zh_CN.log || true
 
       - name: Place CV PDFs
         run: |
