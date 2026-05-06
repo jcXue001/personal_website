@@ -1,6 +1,6 @@
 export const site = {
   name: "Jiacheng Xue",
-  nameZh: "薛嘉成",
+  nameZh: "薛嘉诚",
   title: "Master student, ME, XJTU",
   location: "Xi'an, China",
   emailPrimary: "jiachengxue2001@gmail.com",
@@ -29,6 +29,12 @@ export const site = {
     },
   ],
   internships: [
+    {
+      org: "DJI (Structural Engineer Intern)",
+      orgUrl: "https://www.dji.com/cn",
+      when: "Oct 2025 – Jan 2026",
+      bullets: ["Structural engineering internship at DJI."],
+    },
     {
       org: "DJI (RoboMaster Department)",
       orgUrl: "https://www.dji.com/cn",
