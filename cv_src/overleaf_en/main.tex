@@ -1,4 +1,4 @@
-\documentclass[10pt, letterpaper]{article}
+﻿\documentclass[10pt, letterpaper]{article}
 
 % Packages:
 \usepackage[
@@ -36,8 +36,7 @@
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
 \usepackage{graphicx}
 \usepackage{ragged2e}
-\usepackage{tabularx} % 导言区引入
-
+\usepackage{tabularx} %
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
     \input{glyphtounicode}
@@ -178,10 +177,10 @@
 \begin{tabularx}{\linewidth}{@{}lX@{\extracolsep{\fill}}r@{}}
     \textbf{Xi'an Jiaotong University} && Shaanxi, China \\
     \vspace{0.2 cm}
-    Master of Mechanical Engineering, GPA: 86.21/100 && \textit{Sept. 2023 – present} \\
+    Master of Mechanical Engineering, GPA: 86.21/100 && \textit{Sept. 2023 --present} \\
 
     \textbf{Xi'an Jiaotong University} && Shaanxi, China \\
-    Bachelor of Mechanical Engineering, GPA: 85.61/100 (Rank:18/190) && \textit{Sept. 2019 – Jul. 2023} \\
+    Bachelor of Mechanical Engineering, GPA: 85.61/100 (Rank:18/190) && \textit{Sept. 2019 --Jul. 2023} \\
 \end{tabularx}
 
 \section{Research Interests}
@@ -203,13 +202,13 @@
         \setbox0=\lastbox 
         \settowidth{\contentwidth}{\usebox0} 
         \unhbox0 
-        \hfill\rlap{\textit{\makebox[\contentwidth][r]{#1}}}% 日期斜体
+        \hfill\rlap{\textit{\makebox[\contentwidth][r]{#1}}}%
     }
     \begin{highlightsforbulletentries}
         \item \textbf{Xue, J.}, Bao, H., Liu, T., \textit{et.al.} (2025). Inverse design of mechanical metamaterials balancing manufacturability and compactness: A case study on lattice cells. \textit{Extreme Mechanics Letters}, \textit{79}, 102395. \href{https://doi.org/10.1016/j.eml.2025.102395}{https://doi.org/10.1016/j.eml.2025.102395}.
 
 
-        \item Chi, X.\textsuperscript{†}, \textbf{Xue, J.}\textsuperscript{†}, Jia, L., \textit{et al.} (2025). Machine learning-based online monitoring and closed-loop controlling for 3D printing of continuous fiber-reinforced composites. \textit{Additive Manufacturing Frontiers}, \textit{4}, 200196. \href{https://doi.org/10.1016/j.amf.2025.200196}{https://doi.org/10.1016/j.amf.2025.200196}. \textsuperscript{†}\textit{Co-first authors}.
+        \item Chi, X.\textsuperscript{\\dagger, \textbf{Xue, J.}\textsuperscript{\\dagger, Jia, L., \textit{et al.} (2025). Machine learning-based online monitoring and closed-loop controlling for 3D printing of continuous fiber-reinforced composites. \textit{Additive Manufacturing Frontiers}, \textit{4}, 200196. \href{https://doi.org/10.1016/j.amf.2025.200196}{https://doi.org/10.1016/j.amf.2025.200196}. \textsuperscript{\\dagger\textit{Co-first authors}.
 
         \item Wu, L., \textbf{Xue, J.}, Tian, X., \textit{et al.} (2023). 3D-printed metamaterials with versatile functionalities. \textit{Additive Manufacturing Frontiers}, \textit{2}, 100091. \href{https://doi.org/10.1016/j.cjmeam.2023.100091}{https://doi.org/10.1016/j.cjmeam.2023.100091}.
 
@@ -222,7 +221,7 @@
 \section{Research Experience}
 
         \begin{twocolentry}{
-            \textit{Mar. 2021 – Apr. 2023}
+            \textit{Mar. 2021 --Apr. 2023}
         }
             \textbf{Advanced Mobile Chassis Design}\end{twocolentry}
         \vspace{0.10 cm}
@@ -239,7 +238,7 @@
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-            \textit{Sept. 2022 – Sept 2023}
+            \textit{Sept. 2022 --Sept 2023}
         }
             \textbf{Online Monitoring and Closed-Loop Control of 3D Printing}\end{twocolentry}
         \vspace{0.10 cm}
@@ -254,7 +253,7 @@
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
-            \textit{Oct. 2023 – Feb. 2024}
+            \textit{Oct. 2023 --Feb. 2024}
         }
             \textbf{Pedestrian Trajectory Recognition and Prediction Based on UAV Vision}\end{twocolentry}
         \vspace{0.10 cm}
@@ -268,22 +267,22 @@
         \end{onecolentry}
         
         \begin{twocolentry}{
-            \textit{Oct. 2023 – present}
+            \textit{Oct. 2023 --present}
         }
             \textbf{Inverse Design of Mechanical Metamaterials Using Machine Learning}\end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Validated mechanical metamaterial designs through finite element method (FEM) simulations and crafted a bespoke computer vision-based program for non-contact Poisson’s ratio monitoring, significantly enhancing experimental analysis of negative Poisson’s ratio and mechanical response.
+                \item Validated mechanical metamaterial designs through finite element method (FEM) simulations and crafted a bespoke computer vision-based program for non-contact Poisson's ratio monitoring, significantly enhancing experimental analysis of negative Poisson's ratio and mechanical response.
                 
-                \item Analyzed and refined open source machine learning code from research papers to pinpoint the most effective algorithm for inverse design, designed for regression tasks, achieving an exceptional R² accuracy of 99.7\%.
+                \item Analyzed and refined open source machine learning code from research papers to pinpoint the most effective algorithm for inverse design, designed for regression tasks, achieving an exceptional R^2 accuracy of 99.7\%.
                 
                 \item Spearheaded the independent design, research, and authorship of a trailblazing paper integrating inverse design with multi-objective optimization for mechanical metamaterials, expertly optimizing lattice structure parameters to balance manufacturability, compactness, and performance.
             \end{highlights}
         \end{onecolentry}
 
         \begin{twocolentry}{
-            \textit{Apr. 2024 – present}
+            \textit{Apr. 2024 --present}
         }
             \textbf{Mobile Robotic Platform for Additive Manufacturing }\end{twocolentry}
 
@@ -303,9 +302,7 @@
 
 \section{Patents}
 \begin{onecolentry}
-    % 简化日期命令，直接使用\hfill实现右对齐
-    \newcommand{\addDate}[1]{\hfill\textit{#1}}
-    
+    \\newcommand{\\addDate}[1]{\\hfill\\textit{#1}}
     \begin{highlightsforbulletentries}
     
         \item Li D, \textbf{Xue J. (2024).} \textit{Innovative 3D printing robot for automated manufacturing.} CN Patent No. 7846171. China National Intellectual Property Administration.
@@ -315,13 +312,13 @@
 
 \section{Honors}
 \begin{onecolentry}
-    % 简化日期右对齐命令，直接用\hfill+斜体
+    %
     \newcommand{\addDate}[1]{\hfill\textit{#1}}
     
     \begin{highlightsforbulletentries}
         \item First-Class SMC Fellowship, \textit{Beijing SMC Education Foundation}, \textbf{Top 10\%}
               \addDate{2021} 
-        \item Outstanding Student Leader Graduate of Xi’an Jiaotong University
+        \item Outstanding Student Leader Graduate of Xi'an Jiaotong University
               \addDate{2023}
         \item First Prize in the RoboMaster National Robotics Competition, \textbf{team leader in 2023}
               \addDate{2022-2024}
@@ -330,9 +327,7 @@
 
 \section{Conference Presentations}
 \begin{onecolentry}
-    % 简化日期命令，直接使用\hfill实现右对齐
-    \newcommand{\addDate}[1]{\hfill\textit{#1}}
-    
+    \\newcommand{\\addDate}[1]{\\hfill\\textit{#1}}
     \begin{highlightsforbulletentries}
         \item Presented machine learning-based inverse design of mechanical metamaterials at the 3rd China Metamaterials Conference, \textbf{Jiaxing, China}
               \addDate{May 2024}
@@ -349,9 +344,7 @@
 
 \section{Internships}
 \begin{onecolentry}
-    % 简化日期命令，直接使用\hfill实现右对齐
-    \newcommand{\addDate}[1]{\hfill\textit{#1}}
-    
+    \\newcommand{\\addDate}[1]{\\hfill\\textit{#1}}
     \begin{highlightsforbulletentries}
 
         \item Structural Engineer Intern, DJI.
@@ -373,7 +366,7 @@
         \setbox0=\lastbox 
         \settowidth{\contentwidth}{\usebox0} 
         \unhbox0 
-        \hfill\rlap{\textit{\makebox[\contentwidth][r]{#1}}}% 日期斜体
+        \hfill\rlap{\textit{\makebox[\contentwidth][r]{#1}}}%
     }
     \begin{highlightsforbulletentries}
         \item \textbf{Language:} English (TOEFL iBT: 98), Chinese (Native)
@@ -384,3 +377,6 @@
 
 
 \end{document}
+
+
+
